@@ -1,0 +1,102 @@
+@font-face {
+    font-family: digital;
+    src: url("../fonts/DIGITALDREAM.ttf");
+}
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom right, rgba(255,0,0,.4), rgba(0,0,255,0.4)), url("../imags/bg.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    background: rgba(255,255,255,.4);
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 100px;
+    text-align: center;
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+    box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+}
+
+.row > .col h2{
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    margin-bottom: 1.5rem;
+    letter-spacing: 8px;
+    color: ;
+    
+    font-weight: 600;
+}
+.score{
+    font-family: "digital";
+    margin-bottom: 1.5rem;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    padding: 75px;
+    font-size: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.6);
+}
+.btn{
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 5px 5px rgba(0,0,0,.5);
+    border-radius: 5px;
+    cursor:pointer;
+    transition: all .2s;
+    color: #444;
+    font-weight: 900;
+    font-size: 15px;
+    text-shadow: 0 0 1px black;
+}
+.btn:not(:last-child){
+    margin-right: 5px;
+}
+.btn:active{
+    transform: translateY(2px);
+    box-shadow: 2px 2px 4px rgba(0,0,0,.2);
+}
+.btn-new{
+    position: absolute;
+    top: 40px;
+}
+.btn-1{
+    background: rgba(255,0,0,.5);
+}
+.btn-2{
+    background: rgba(0,233,233,.4);
+}
+.btn-3{
+    background: rgba(0,255,0,.4);
+}
+@media (max-width: 900px){
+    .row{
+        width: 100%;
+    }
+    .row > .col h2{
+        letter-spacing: 4px;
+    }
+    .score{
+        padding: 50px;
+        margin: 10px;
+    }
+}
